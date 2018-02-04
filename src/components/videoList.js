@@ -16,5 +16,10 @@ angular.module('video-player')
        
       // debugger;
     },
-    templateUrl: 'src/templates/videoList.html'
+    // templateUrl: 'src/templates/videoList.html'
+    template: `
+      <ul class="video-list">
+        <video-list-entry videoselect="$ctrl.onClick" video="video" ng-repeat="video in $ctrl.videos"/>
+      </ul>
+    `
   });
